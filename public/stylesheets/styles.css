@@ -157,7 +157,7 @@ a.btn-cta-primary,
     background: #000000;
     border-top: solid 3px #ceb888;
     color: #fff;
-    padding: 10px 0;
+    padding: 1px 0;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -294,6 +294,7 @@ a, a:hover {
 }
 .instagram-user-image-font {
     color: #000000;
+    margin-left: 4px;
     margin-left: 4px;
 }
 .instagram-user {

@@ -11,7 +11,7 @@ function setContentView() {
     var headerHeight = $('#header').height();
     var footerHeight = $('#footer').height();
     var windowHeight = $(window).height();
-    var contentHeight = windowHeight - (headerHeight + footerHeight) - 27;
+    var contentHeight = windowHeight - (headerHeight + footerHeight) - 10;
 
     $('#content').css({
         height: contentHeight
