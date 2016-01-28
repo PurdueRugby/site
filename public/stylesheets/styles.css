@@ -273,7 +273,6 @@ a, a:hover {
 .instagram {
     border: 1px solid #CEB888;
     background: #CEB888;
-    z-index: 20000;
     border-radius: 3px;
 }
 .instagram-header {
@@ -301,15 +300,24 @@ a, a:hover {
 .instagram-user {
     height: 30px;
     background: #000000;
-    z-index: 1999;
 }
 .instagram-user-font {
     color: #CEB888;
     font-size: 80%;
     margin-top: 5px;
-    /*width: 20%;*/
 }
-.instagram-content {
-    /*background: #000000;*/
-    /*border: 20px solid #CEB888;*/
+.twitter {
+    background: #000000;
+    border: 1px solid #CEB888;
+    border-radius: 3px;
+}
+.twitter-header {
+    background: #000000;
+    color: #CEB888;
+}
+.twitter-header-font {
+    color: #CEB888;
+}
+.twitter-content {
+    background: #CEB888;
 }

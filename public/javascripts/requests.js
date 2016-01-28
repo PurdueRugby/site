@@ -98,9 +98,8 @@ function showMessage(msg, warning) {
             '<span class="sr-only">Error:</span> ' + msg + '</div>');
     }
 
-
-
 }
+
 function clearMessage() {
     $("#div-message").empty();
 }

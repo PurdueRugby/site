@@ -1,7 +1,4 @@
 <!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
-<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
 <head>
     <title>Purdue Men's Rugby</title>
     <!-- Meta -->
@@ -17,26 +14,7 @@
     <link id="theme-style" rel="stylesheet" href="public/stylesheets/styles.css">
 </head>
 
-<script>window.twttr = (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0],
-            t = window.twttr || {};
-    if (d.getElementById(id)) return t;
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "https://platform.twitter.com/widgets.js";
-    fjs.parentNode.insertBefore(js, fjs);
-
-    t._e = [];
-    t.ready = function(f) {
-        t._e.push(f);
-    };
-    return t;
-}(document, "script", "twitter-wjs"));
-</script>
-
-
 <body>
-
     <a href="index.html" class="logo"></a>
     <!-- ******HEADER****** -->
     <nav id="header" class="navbar navbar-fixed-top navbar-rugby">
@@ -49,15 +27,12 @@
                 <p class="navbar-brand title" href="#"></p>
             </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
+            <!-- Navbar  -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="index.html">HOME</a></li>
-                    <!--<li><a href="#">TEAM</a></li>-->
-                    <!--<li><a href="#">SCHEDULES</a></li>-->
                     <li><a href="recruitment.html">RECRUITING</a></li>
                     <li><a href="http://web.ics.purdue.edu/~rugby/index.php">OLD SITE</a></li>
-                    <!--<li><a href="#">GAME PHOTOS</a></li>-->
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
@@ -81,7 +56,6 @@
                             </ul>
                         </div>
                     </div>
-
                 </div>
                 <!-- Construction -->
                 <div class="col-md-4">
@@ -91,12 +65,10 @@
                         <button id="btn-oldSite" class="btn btn-primary btn-rugby center-block">Old Site</button>
                     </div>
                 </div>
-
-
             </div>
             <!-- Row 1-->
             <div class="row">
-                <!-- Twitter Feed-->
+                <!-- Instagram Feed-->
                 <div id="insta-wrapper" class="col-md-4">
                     <div class="content">
                         <div id="insta" class="instagram">
@@ -119,10 +91,6 @@
                             <div class="instagram-content">
                                 <div class="center-block">
                                     <iframe id="insta-widget" src="http://widget.websta.me/in/purduemensrugby/?r=1&w=2&h=2&b=1&p=5&sb=off" allowtransparency="true" frameborder="0" scrolling="no" style="border:none;overflow:hidden;width:230px; height: 230px" ></iframe> <!-- websta - websta.me -->
-
-                                    <!--<script src="//instansive.com/widget/js/instansive.js"></script>-->
-                                    <!--<iframe src="//instansive.com/widgets/7d52f42758165ebfa971ebaff4b162e4.html" id="instansive_7d52f42758" name="instansive_7d52f42758"  scrolling="no" allowtransparency="true" class="instansive-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>-->
-                                    <!--<iframe src="//instansive.com/widgets/ece01861b49e540d9548bbfae22ac0ed.html" id="instansive_ece01861b4" name="instansive_ece01861b4"  scrolling="no" allowtransparency="true" class="instansive-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>-->
                                 </div>
                             </div>
                         </div>
@@ -140,13 +108,21 @@
             </div>
             <!-- Row 2-->
             <div class="row">
+                <!-- Twitter Feed -->
                 <div class="col-md-4">
                     <div class="content">
-                        <div id="socialMediaBox" class="center-block twitterFeed">
-                            <a class="twitter-timeline center-block twitterFeed" href="https://twitter.com/PurdueMensRugby" data-widget-id="614302701787193344" height="235"></a>
+                        <div id="twitter" class="twitter">
+                            <div class="twitter-header">
+                                <p class="text-center "><a href="https://www.facebook.com/purduemensrugby/" class="fa fa-lg fa-twitter" style="color: #CEB888; margin-top: 10px"></a></p>
+                            </div>
+                            <div class="twitter-content">
+                                <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/PurdueMensRugby" data-chrome="nofooter noheader transparent" data-widget-id="692843745608249350">Tweets by @PurdueMensRugby</a>
+                                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <!-- Donate Please -->
                 <div class="col col-md-8">
                     <div class="content">
                         <h1 class="text-center">Give Back To Purdue Rugby</h1>
@@ -155,15 +131,13 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
     </div>
 
     <!-- ******FOOTER****** -->
     <footer id="footer" class="footer">
         <div class="">
-            <h6 class="text-center">Harrison Beckerich  <a href="https://www.facebook.com/purduemensrugby/" class="fa fa-lg fa-github"></a>  hbeckeri@purdue.edu</h6>
+            <h6 class="text-center">Harrison Beckerich  <a href="https://github.com/hbeckeri" class="fa fa-lg fa-github"></a>  hbeckeri@purdue.edu</h6>
         </div><!--//container-->
     </footer><!--//footer-->
 </body>
@@ -173,7 +147,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="public/javascripts/style.js"></script>
 <script src="public/javascripts/buttons.js"></script>
-
 </html>
 
 

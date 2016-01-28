@@ -6,6 +6,7 @@ $(document).ready(function() {
 
 $(window).resize(function() {
     setContentView();
+    setInstaView();
 });
 
 function setContentView() {
@@ -31,18 +32,21 @@ function setInstaTime() {
 function setInstaView() {
     var widj = $('#insta-widget');
     var insta = $('#insta');
-    var wrapper = $('#insta-wrapper');
+    var intsaWrapper = $('#insta-wrapper');
+    var twitter = $('#twitter');
 
     var size = widj.width() + 2;
-    var margin = (wrapper.width() - size) / 2;
+    var margin = (intsaWrapper.width() - size - 20) / 2;
 
 
     insta.css({
         width: size,
-        marginLeft: margin,
-        marginRight: margin
+        marginLeft: margin
     });
-
-
+    twitter.css({
+        width: size,
+        marginLeft: margin
+    })
 }
+
 
