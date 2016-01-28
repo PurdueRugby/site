@@ -1,5 +1,6 @@
 $(document).ready(function() {
     setContentView();
+    setInstaView();
     setInstaTime();
 });
 
@@ -25,5 +26,23 @@ function setInstaTime() {
     var instaTime = $('#insta-time');
     console.log(rand + 'm');
     instaTime.html(rand + 'm');
+}
+
+function setInstaView() {
+    var widj = $('#insta-widget');
+    var insta = $('#insta');
+    var wrapper = $('#insta-wrapper');
+
+    var size = widj.width() + 2;
+    var margin = (wrapper.width() - size) / 2;
+
+
+    insta.css({
+        width: size,
+        marginLeft: margin,
+        marginRight: margin
+    });
+
+
 }
 

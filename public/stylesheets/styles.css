@@ -274,6 +274,7 @@ a, a:hover {
     border: 1px solid #CEB888;
     background: #CEB888;
     z-index: 20000;
+    border-radius: 3px;
 }
 .instagram-header {
     color: #000000;
@@ -307,4 +308,8 @@ a, a:hover {
     font-size: 80%;
     margin-top: 5px;
     /*width: 20%;*/
+}
+.instagram-content {
+    /*background: #000000;*/
+    /*border: 20px solid #CEB888;*/
 }
