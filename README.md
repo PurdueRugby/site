@@ -2,4 +2,4 @@
 
 [Purdue Men's Rugby](http://web.ics.purdue.edu/~rugby/)
 
-Thankyou Bryce Elegy for your php scripts
+Thank you Bryce Egley for your php scripts
