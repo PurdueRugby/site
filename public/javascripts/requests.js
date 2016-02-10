@@ -103,5 +103,3 @@ function showMessage(msg, warning) {
 function clearMessage() {
     $("#div-message").empty();
 }
-
-
