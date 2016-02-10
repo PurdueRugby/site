@@ -18,8 +18,6 @@ function setContentView() {
     $('#content').css({
         height: contentHeight
     });
-
-
 }
 
 function setInstaTime() {
