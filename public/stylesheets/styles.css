@@ -311,6 +311,9 @@ a, a:hover {
     border: 1px solid #CEB888;
     border-radius: 3px;
 }
+.twitter::-webkit-scrollbar {
+    display: none;
+}
 .twitter-header {
     background: #000000;
     color: #CEB888;
@@ -320,4 +323,7 @@ a, a:hover {
 }
 .twitter-content {
     background: #CEB888;
+}
+::-webkit-scrollbar {
+    display: none;
 }
