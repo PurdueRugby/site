@@ -1,11 +1,13 @@
 import React from 'react';
 import { Router, Route, IndexRoute } from 'react-router'
-import Main from 'Main'
+import App from './app/App'
 
 
-export const routes = {
+const routes = (
   <Router>
-    <Route path='/' component={Main}>
+    <Route path='/' component={App}>
     </Route>
   </Router>
-}
+);
+
+export default routes;
