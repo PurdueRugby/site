@@ -1,7 +1,7 @@
 var React = require('react');
 var PropTypes = React.PropTypes;
 
-var Main = React.createClass({
+var App = React.createClass({
 
   render: function() {
     return (
