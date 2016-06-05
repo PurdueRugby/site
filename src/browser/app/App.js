@@ -1,12 +1,19 @@
 import React, { PropTypes, Component } from 'react';
-
+import Sidebar from '../common/Sidebar'
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
+    const style = {background: '#000000'}
+    const hstyle = {color: 'white'}
     return (
-      <div className='main-container'>
-        <p>Hello, World</p>
-        {this.props.children}
+
+      <div className='outer-container' style={style}>
+        <Sidebar />
+        <div className='main-container'>
+        </div>
       </div>
     );
   };

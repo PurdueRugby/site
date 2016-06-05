@@ -27,6 +27,8 @@
     "eslint-plugin-jsx-a11y": "^1.2.3",
     "eslint-plugin-react": "^5.1.1",
     "react": "^15.1.0",
+    "react-bootstrap": "^0.29.4",
+    "react-burger-menu": "^1.9.0",
     "react-dom": "^15.1.0",
     "react-router": "^2.4.1",
     "webpack": "^1.13.1"
