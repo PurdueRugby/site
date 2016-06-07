@@ -1,6 +1,6 @@
 import React from 'react';
-import { Router, Route, IndexRoute, hashHistory } from 'react-router'
-import App from './app/App'
+import { Router, Route, IndexRoute, hashHistory } from 'react-router';
+import App from './app/App';
 
 
 const routes = (
