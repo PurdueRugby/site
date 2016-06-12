@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/PurdueRugby/site#readme",
   "dependencies": {
+    "babel-preset-stage-0": "^6.5.0",
     "react": "^15.1.0",
     "react-bootstrap": "^0.29.4",
     "react-burger-menu": "^1.9.0",
