@@ -4,7 +4,7 @@ const Home = React.createClass({
   render () {
     return (
       <div>
-        I'm Home
+        This is the Home page
       </div>
     )
   }

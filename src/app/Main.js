@@ -1,7 +1,7 @@
 /**
- * In this file, we create a React component
- * which incorporates components providedby material-ui.
- */
+* In this file, we create a React component
+* which incorporates components providedby material-ui.
+*/
 import React, { Component } from 'react';
 
 // Theme
@@ -9,6 +9,7 @@ import { getMuiTheme, MuiThemeProvider, darkBaseTheme } from 'material-ui/styles
 
 // Components
 import { Drawer, MenuItem, AppBar, Divider } from 'material-ui';
+import { Grid, Col, Row, Button } from 'react-bootstrap';
 
 const rugbyTheme = getMuiTheme({
   palette: {
@@ -50,19 +51,19 @@ class Main extends Component {
       <MuiThemeProvider muiTheme={rugbyTheme}>
         <div>
           <AppBar
-              title="Purdue Rugby"
-              onLeftIconButtonTouchTap={this.toggleDrawer}
-              />
-          <Drawer open={this.state.open}>
-            <h2>Purdue Rugby</h2>
-
-            <MenuItem>Home</MenuItem>
-            <MenuItem>Team</MenuItem>
-            <MenuItem>Recruiting</MenuItem>
-            <MenuItem>Donate</MenuItem>
+            title="Purdue Rugby"
+            onLeftIconButtonTouchTap={this.toggleDrawer}
+            />
+          <Drawer
+            open={this.state.open}
+            docked={false}
+            onRequestChange={ (open) => this.setState({open})}
+          >
+            <h4>Purdue Rugby</h4>
             <Divider />
-            <MenuItem onTouchTap={this.closeDrawer}>Close</MenuItem>
+            {['Home', 'Team', 'Recruiting', 'Donate'].map((item, i) => <MenuItem key={i} onTouchTap={this.closeDrawer}>{item}</MenuItem>)}
           </Drawer>
+          {/* Allows Main component to render children from router */}
           {React.cloneElement(this.props.children, this.children)}
         </div>
       </MuiThemeProvider>
