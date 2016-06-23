@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react'
 import { AppBar, Divider, Drawer, MenuItem } from 'material-ui';
+import { Link } from 'react-router';
 
 const Navigation = ({drawerOpen, menuItems, onRequestChange, title, toggleDrawer}) => {
   return (
@@ -16,7 +17,8 @@ const Navigation = ({drawerOpen, menuItems, onRequestChange, title, toggleDrawer
         <h4>{title}</h4>
         <Divider />
         {/* Create menu items */}
-        {menuItems.map((item, i) => <MenuItem key={i} onTouchTap={toggleDrawer}>{item}</MenuItem>)}
+        {menuItems.map((item, i) => <Link key={i} to='/hi'><MenuItem 
+          onTouchTap={toggleDrawer}>{item}</MenuItem></Link>)}
       </Drawer>
     </div>
   )
