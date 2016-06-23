@@ -2,18 +2,13 @@
  * In this file, we create a React component
  * which incorporates components providedby material-ui.
  */
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 // Theme
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
+import { getMuiTheme, MuiThemeProvider, darkBaseTheme } from 'material-ui/styles';
 
 // Components
-import Drawer from 'material-ui/Drawer';
-import MenuItem from 'material-ui/MenuItem';
-import AppBar from 'material-ui/AppBar';
-import Divider from 'material-ui/Divider';
+import { Drawer, MenuItem, AppBar, Divider } from 'material-ui';
 
 const rugbyTheme = getMuiTheme({
   palette: {
@@ -26,10 +21,8 @@ const rugbyTheme = getMuiTheme({
 
 class Main extends Component {
 
-
-  constructor(props, context) {
-    super(props, context);
-
+  constructor(props) {
+    super(props);
     // Bind function calls
     this.toggleDrawer = this.toggleDrawer.bind(this);
     this.closeDrawer = this.closeDrawer.bind(this);
@@ -56,7 +49,6 @@ class Main extends Component {
     return (
       <MuiThemeProvider muiTheme={rugbyTheme}>
         <div>
-
           <AppBar
               title=""
               onLeftIconButtonTouchTap={this.toggleDrawer}
@@ -71,7 +63,6 @@ class Main extends Component {
             <Divider />
             <MenuItem onTouchTap={this.closeDrawer}>Close</MenuItem>
           </Drawer>
-
         </div>
       </MuiThemeProvider>
     );
