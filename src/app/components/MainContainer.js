@@ -1,9 +1,4 @@
-/**
-* In this file, we create a React component
-* which incorporates components providedby material-ui.
-*/
 import React, { Component } from 'react';
-
 // Theme
 import { MuiThemeProvider, darkBaseTheme } from 'material-ui/styles';
 import theme from '../config/theme';
@@ -11,8 +6,7 @@ import theme from '../config/theme';
 import { Link } from 'react-router';
 import Navigation from './Navigation';
 
-
-class Main extends Component {
+class MainContainer extends Component {
   constructor(props) {
     super(props);
     // Bind function calls
@@ -31,7 +25,13 @@ class Main extends Component {
   }
 
   render() {
-    const menuItems = ['Home', 'Team', 'Recruiting', 'Donate'];
+    // item array for sidebar items
+    const menuItems = [
+      {name: 'Home', path: '/'},
+      {name: 'Team', path: '/team'},
+      {name: 'Recruiting', path: '/recruiting'},
+      {name: 'Donate', path: '/donate'}
+      ];
     return (
       <MuiThemeProvider muiTheme={theme}>
         <div>
@@ -50,4 +50,4 @@ class Main extends Component {
   }
 }
 
-export default Main;
+export default MainContainer;

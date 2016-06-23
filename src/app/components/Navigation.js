@@ -17,8 +17,8 @@ const Navigation = ({drawerOpen, menuItems, onRequestChange, title, toggleDrawer
         <h4>{title}</h4>
         <Divider />
         {/* Create menu items */}
-        {menuItems.map((item, i) => <Link key={i} to='/hi'><MenuItem 
-          onTouchTap={toggleDrawer}>{item}</MenuItem></Link>)}
+        {menuItems.map((item, i) => <Link key={i} to={item.path}><MenuItem
+          onTouchTap={toggleDrawer}>{item.name}</MenuItem></Link>)}
       </Drawer>
     </div>
   )
