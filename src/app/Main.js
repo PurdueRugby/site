@@ -42,7 +42,7 @@ class Main extends Component {
   }
 
   openDrawer() {
-    this.setState({open: false});
+    this.setState({open: true});
   }
 
   render() {
@@ -50,7 +50,7 @@ class Main extends Component {
       <MuiThemeProvider muiTheme={rugbyTheme}>
         <div>
           <AppBar
-              title=""
+              title="Purdue Rugby"
               onLeftIconButtonTouchTap={this.toggleDrawer}
               />
           <Drawer open={this.state.open}>
@@ -63,6 +63,7 @@ class Main extends Component {
             <Divider />
             <MenuItem onTouchTap={this.closeDrawer}>Close</MenuItem>
           </Drawer>
+          {React.cloneElement(this.props.children, this.children)}
         </div>
       </MuiThemeProvider>
     );
