@@ -4,3 +4,4 @@ git.sh
 .idea
 /node_modules/
 /build/
+*.DS_Store

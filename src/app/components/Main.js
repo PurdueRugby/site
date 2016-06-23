@@ -5,54 +5,37 @@
 import React, { Component } from 'react';
 
 // Theme
-import { getMuiTheme, MuiThemeProvider, darkBaseTheme } from 'material-ui/styles';
-
+import { MuiThemeProvider, darkBaseTheme } from 'material-ui/styles';
+import theme from '../config/theme';
 // Components
 import { Drawer, MenuItem, AppBar, Divider } from 'material-ui';
-import { Grid, Col, Row, Button } from 'react-bootstrap';
+import { Link } from 'react-router';
 
-const rugbyTheme = getMuiTheme({
-  palette: {
-    textColor: '#ceb888',
-    canvasColor: '#212121',
-    primary1Color: '#ceb888',
-    alternateTextColor: '#212121'
-  }
-});
+
 
 class Main extends Component {
-
   constructor(props) {
     super(props);
     // Bind function calls
-    this.toggleDrawer = this.toggleDrawer.bind(this);
-    this.closeDrawer = this.closeDrawer.bind(this);
-    this.openDrawer = this.openDrawer.bind(this);
+    this.handleToggleDrawer = this.handleToggleDrawer.bind(this);
 
     // Set initial state
-    this.state = { open: true }
+    this.state = { open: false}
   }
 
   // Handler for leftIconButton
-  toggleDrawer() {
+  handleToggleDrawer() {
     this.setState({open: !this.state.open});
   }
 
-  closeDrawer() {
-    this.setState({open: false});
-  }
-
-  openDrawer() {
-    this.setState({open: true});
-  }
-
   render() {
+    const menuItems = ['Home', 'Team', 'Recruiting', 'Donate'];
     return (
-      <MuiThemeProvider muiTheme={rugbyTheme}>
+      <MuiThemeProvider muiTheme={theme}>
         <div>
           <AppBar
             title="Purdue Rugby"
-            onLeftIconButtonTouchTap={this.toggleDrawer}
+            onLeftIconButtonTouchTap={this.handleToggleDrawer}
             />
           <Drawer
             open={this.state.open}
@@ -61,7 +44,8 @@ class Main extends Component {
           >
             <h4>Purdue Rugby</h4>
             <Divider />
-            {['Home', 'Team', 'Recruiting', 'Donate'].map((item, i) => <MenuItem key={i} onTouchTap={this.closeDrawer}>{item}</MenuItem>)}
+            {/* Create menu items */}
+            {menuItems.map((item, i) => <MenuItem key={i} onTouchTap={this.handleToggleDrawer}>{item}</MenuItem>)}
           </Drawer>
           {/* Allows Main component to render children from router */}
           {React.cloneElement(this.props.children, this.children)}
