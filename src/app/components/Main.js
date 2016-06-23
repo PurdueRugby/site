@@ -8,9 +8,8 @@ import React, { Component } from 'react';
 import { MuiThemeProvider, darkBaseTheme } from 'material-ui/styles';
 import theme from '../config/theme';
 // Components
-import { Drawer, MenuItem, AppBar, Divider } from 'material-ui';
 import { Link } from 'react-router';
-
+import Navigation from './Navigation';
 
 
 class Main extends Component {
@@ -18,12 +17,15 @@ class Main extends Component {
     super(props);
     // Bind function calls
     this.handleToggleDrawer = this.handleToggleDrawer.bind(this);
-
+    this.handleRequestChange= this.handleToggleDrawer.bind(this);
     // Set initial state
     this.state = { open: false}
   }
 
-  // Handler for leftIconButton
+  handleRequestChange(open) {
+    this.setState({open});
+  }
+  // Handler for leftIconButton and menu clicks'
   handleToggleDrawer() {
     this.setState({open: !this.state.open});
   }
@@ -33,21 +35,14 @@ class Main extends Component {
     return (
       <MuiThemeProvider muiTheme={theme}>
         <div>
-          <AppBar
-            title="Purdue Rugby"
-            onLeftIconButtonTouchTap={this.handleToggleDrawer}
-            />
-          <Drawer
-            open={this.state.open}
-            docked={false}
-            onRequestChange={ (open) => this.setState({open})}
-          >
-            <h4>Purdue Rugby</h4>
-            <Divider />
-            {/* Create menu items */}
-            {menuItems.map((item, i) => <MenuItem key={i} onTouchTap={this.handleToggleDrawer}>{item}</MenuItem>)}
-          </Drawer>
-          {/* Allows Main component to render children from router */}
+          <Navigation
+            drawerOpen={this.state.open}
+            menuItems={menuItems}
+            onRequestChange={this.handleRequestChange}
+            //In case location is used to determin title for page
+            title='Purdue Rugby'
+            toggleDrawer={this.handleToggleDrawer}
+          />
           {React.cloneElement(this.props.children, this.children)}
         </div>
       </MuiThemeProvider>
