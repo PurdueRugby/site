@@ -1,27 +1,38 @@
-import React, { PropTypes, Component } from 'react'
-import { Step, Stepper, StepButton } from 'material-ui/Stepper';
-import { FlatButton, RaisedButton } from 'material-ui';
+import React from 'react';
+import {
+  Step,
+  Stepper,
+  StepButton,
+} from 'material-ui/Stepper';
+import RaisedButton from 'material-ui/RaisedButton';
+import FlatButton from 'material-ui/FlatButton';
 
+/**
+ * Non-linear steppers allow users to enter a multi-step flow at any point.
+ *
+ * This example is similar to the regular horizontal stepper, except steps are no longer
+ * automatically set to `disabled={true}` based on the `activeStep` prop.
+ *
+ * We've used the `<StepButton>` here to demonstrate clickable step labels.
+ */
+class RecruitmentContainer extends React.Component {
 
-class RecruitmentContainer extends Component {
   constructor(props) {
     super(props);
     // set initial state
     this.state = {
-      finished: false,
       stepIndex: 0,
     };
     // bind functions to scope
     this.handleNext = this.handleNext.bind(this);
-    this.handlePrev = this.handlePrev.bind(this);
+    this.handlePrev = this.handlePrev.bind(this); 
   }
 
   handleNext() {
     const {stepIndex} = this.state;
-    this.setState({
-      stepIndex: stepIndex + 1,
-      finished: stepIndex >= 2,
-    });
+    if (stepIndex < 2) {
+      this.setState({stepIndex: stepIndex + 1});
+    }
   }
 
   handlePrev() {
@@ -45,52 +56,44 @@ class RecruitmentContainer extends Component {
   }
 
   render() {
-    const {finished, stepIndex} = this.state;
+    const {stepIndex} = this.state;
     const contentStyle = {margin: '0 16px'};
+
     return (
       <div style={{width: '100%', maxWidth: 700, margin: 'auto'}}>
-        <Stepper activeStep={stepIndex}>
+        <Stepper linear={false} activeStep={stepIndex}>
           <Step>
-            <StepButton>Select campaign settings</StepButton>
+            <StepButton onClick={() => this.setState({stepIndex: 0})}>
+              Select campaign settings
+            </StepButton>
           </Step>
           <Step>
-            <StepButton>Create an ad group</StepButton>
+            <StepButton onClick={() => this.setState({stepIndex: 1})}>
+              Create an ad group
+            </StepButton>
           </Step>
           <Step>
-            <StepButton>Create an ad</StepButton>
+            <StepButton onClick={() => this.setState({stepIndex: 2})}>
+              Create an ad
+            </StepButton>
           </Step>
         </Stepper>
         <div style={contentStyle}>
-          {finished ? (
-            <p>
-              <a
-                href="#"
-                onClick={(event) => {
-                  event.preventDefault();
-                  this.setState({stepIndex: 0, finished: false});
-                }}
-              >
-                Click here
-              </a> to reset the example.
-            </p>
-          ) : (
-            <div>
-              <p>{this.getStepContent(stepIndex)}</p>
-              <div style={{marginTop: 12}}>
-                <FlatButton
-                  label="Back"
-                  disabled={stepIndex === 0}
-                  onTouchTap={this.handlePrev}
-                  style={{marginRight: 12}}
-                />
-                <RaisedButton
-                  label={stepIndex === 2 ? 'Finish' : 'Next'}
-                  primary={true}
-                  onTouchTap={this.handleNext}
-                />
-              </div>
-            </div>
-          )}
+          <p>{this.getStepContent(stepIndex)}</p>
+          <div style={{marginTop: 12}}>
+            <FlatButton
+              label="Back"
+              disabled={stepIndex === 0}
+              onTouchTap={this.handlePrev}
+              style={{marginRight: 12}}
+            />
+            <RaisedButton
+              label="Next"
+              disabled={stepIndex === 2}
+              primary={true}
+              onTouchTap={this.handleNext}
+            />
+          </div>
         </div>
       </div>
     );

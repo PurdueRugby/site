@@ -1,10 +1,10 @@
 {
-  "name": "material-ui-example-browserify",
-  "version": "0.15.0",
-  "description": "Sample project that uses Material-UI",
+  "name": "Purdue Rugby Site",
+  "version": "0.0.1",
+  "description": "Purdue Rugby Official Team Page",
   "repository": {
     "type": "git",
-    "url": "https://github.com/callemall/material-ui.git"
+    "url": "https://github.com/PurdueRugby/site.git"
   },
   "scripts": {
     "start": "gulp"
