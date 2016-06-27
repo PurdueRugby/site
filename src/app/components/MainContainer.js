@@ -29,7 +29,7 @@ class MainContainer extends Component {
     const menuItems = [
       {name: 'Home', path: '/'},
       {name: 'Team', path: '/team'},
-      {name: 'Recruiting', path: '/recruiting'},
+      {name: 'Recruitment', path: '/recruitment'},
       {name: 'Donate', path: '/donate'}
       ];
     return (
