@@ -26,7 +26,7 @@ const Navigation = ({drawerOpen, menuItems, onRequestChange, title, toggleDrawer
 
 Navigation.propTypes = {
   drawerOpen: PropTypes.bool.isRequired,
-  menuItems: PropTypes.arrayOf(PropTypes.string).isRequired,
+  menuItems: PropTypes.array.isRequired,
   onRequestChange: PropTypes.func.isRequired,
   title: PropTypes.string.isRequired,
   toggleDrawer: PropTypes.func.isRequired
