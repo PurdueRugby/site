@@ -7,6 +7,9 @@ import {
 import RaisedButton from 'material-ui/RaisedButton';
 import FlatButton from 'material-ui/FlatButton';
 import PersonalInfoForm from '../components/PersonalInfoForm';
+import AthleticInfoForm from '../components/AthleticInfoForm';
+import Paper from 'material-ui/Paper';
+import theme from '../config/theme';
 
 class RecruitmentContainer extends React.Component {
 
@@ -75,7 +78,7 @@ class RecruitmentContainer extends React.Component {
           />
       );
       case 1:
-        return 'What is an ad group anyways?';
+        return <AthleticInfoForm />;
       case 2:
         return 'This is the bit I really care about!';
       default:
@@ -97,7 +100,7 @@ class RecruitmentContainer extends React.Component {
           </Step>
           <Step>
             <StepButton onClick={() => this.setState({stepIndex: 1})}>
-              Rugby Experience
+              Athletic Experience
             </StepButton>
           </Step>
           <Step>

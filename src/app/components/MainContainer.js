@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 // Theme
-import { MuiThemeProvider, darkBaseTheme } from 'material-ui/styles';
+import { MuiThemeProvider } from 'material-ui/styles';
 import theme from '../config/theme';
 // Components
 import { Link } from 'react-router';
 import Navigation from './Navigation';
+import Paper from 'material-ui/Paper';
 import Helmet from 'react-helmet';
 
 class MainContainer extends Component {
@@ -57,8 +58,10 @@ class MainContainer extends Component {
               //In case location is used to determin title for page
               title='Purdue Rugby'
               toggleDrawer={this.handleToggleDrawer}
-            />
-            {React.cloneElement(this.props.children, this.children)}
+              />
+            <Paper style={{marginLeft: '50px'}}>
+              {React.cloneElement(this.props.children, this.children)}
+            </Paper>
           </div>
         </MuiThemeProvider>
       </div>
