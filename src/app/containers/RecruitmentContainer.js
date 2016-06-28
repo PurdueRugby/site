@@ -6,15 +6,8 @@ import {
 } from 'material-ui/Stepper';
 import RaisedButton from 'material-ui/RaisedButton';
 import FlatButton from 'material-ui/FlatButton';
+import PersonalInfoForm from '../components/PersonalInfoForm';
 
-/**
- * Non-linear steppers allow users to enter a multi-step flow at any point.
- *
- * This example is similar to the regular horizontal stepper, except steps are no longer
- * automatically set to `disabled={true}` based on the `activeStep` prop.
- *
- * We've used the `<StepButton>` here to demonstrate clickable step labels.
- */
 class RecruitmentContainer extends React.Component {
 
   constructor(props) {
@@ -22,10 +15,18 @@ class RecruitmentContainer extends React.Component {
     // set initial state
     this.state = {
       stepIndex: 0,
+      // Height in inches
+      heightSlider: 72,
+      // weight in lbs
+      weightSlider: 180
     };
     // bind functions to scope
     this.handleNext = this.handleNext.bind(this);
-    this.handlePrev = this.handlePrev.bind(this); 
+    this.handlePrev = this.handlePrev.bind(this);
+    this.handleHeightSlider = this.handleHeightSlider.bind(this);
+    this.handleWeightSlider = this.handleWeightSlider.bind(this);
+    this.handleGetHeight = this.handleGetHeight.bind(this);
+    this.handleGetWeight = this.handleGetWeight.bind(this);
   }
 
   handleNext() {
@@ -42,10 +43,37 @@ class RecruitmentContainer extends React.Component {
     }
   }
 
+  handleHeightSlider(event, value) {
+    this.setState({heightSlider: value});
+  }
+
+  handleWeightSlider(event, value) {
+    this.setState({weightSlider: value});
+  }
+
+  handleGetHeight() {
+    const height = this.state.heightSlider;
+    return Math.floor(height/12) + '\' ' + Math.round(height % 12) + '"';
+  }
+
+  handleGetWeight() {
+    const weight = this.state.weightSlider;
+    return Math.round(weight) + 'lbs';
+  }
+
   getStepContent(stepIndex) {
     switch (stepIndex) {
       case 0:
-        return 'Select campaign settings...';
+        return (
+          <PersonalInfoForm
+            getWeight={this.handleGetWeight}
+            getHeight={this.handleGetHeight}
+            height={this.state.heightSlider}
+            weight={this.state.weightSlider}
+            handleWeightSlider={this.handleWeightSlider}
+            handleHeightSlider={this.handleHeightSlider}
+          />
+      );
       case 1:
         return 'What is an ad group anyways?';
       case 2:
@@ -64,22 +92,22 @@ class RecruitmentContainer extends React.Component {
         <Stepper linear={false} activeStep={stepIndex}>
           <Step>
             <StepButton onClick={() => this.setState({stepIndex: 0})}>
-              Select campaign settings
+              Personal Information
             </StepButton>
           </Step>
           <Step>
             <StepButton onClick={() => this.setState({stepIndex: 1})}>
-              Create an ad group
+              Rugby Experience
             </StepButton>
           </Step>
           <Step>
             <StepButton onClick={() => this.setState({stepIndex: 2})}>
-              Create an ad
+              Review
             </StepButton>
           </Step>
         </Stepper>
         <div style={contentStyle}>
-          <p>{this.getStepContent(stepIndex)}</p>
+          {this.getStepContent(stepIndex)}
           <div style={{marginTop: 12}}>
             <FlatButton
               label="Back"
@@ -88,8 +116,7 @@ class RecruitmentContainer extends React.Component {
               style={{marginRight: 12}}
             />
             <RaisedButton
-              label="Next"
-              disabled={stepIndex === 2}
+              label={stepIndex === 2 ? "Submit" : "Next"}
               primary={true}
               onTouchTap={this.handleNext}
             />
