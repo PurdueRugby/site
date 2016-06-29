@@ -4,7 +4,7 @@ import { MuiThemeProvider, darkBaseTheme } from 'material-ui/styles';
 import theme from '../config/theme';
 // Components
 import { Link } from 'react-router';
-import Navigation from './Navigation';
+import Navigation from '../components/Navigation';
 
 class MainContainer extends Component {
   constructor(props) {
@@ -29,7 +29,7 @@ class MainContainer extends Component {
     const menuItems = [
       {name: 'Home', path: '/'},
       {name: 'Team', path: '/team'},
-      {name: 'Recruiting', path: '/recruiting'},
+      {name: 'Recruiting', path: '/recruitment'},
       {name: 'Donate', path: '/donate'}
       ];
     return (
