@@ -59,7 +59,7 @@ class MainContainer extends Component {
               title='Purdue Rugby'
               toggleDrawer={this.handleToggleDrawer}
               />
-            <Paper style={{marginLeft: '50px'}}>
+            <Paper>
               {React.cloneElement(this.props.children, this.children)}
             </Paper>
           </div>
