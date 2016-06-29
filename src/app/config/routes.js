@@ -1,14 +1,16 @@
 import React from 'react';
-import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import MainContainer from '../components/MainContainer';
 import Home from '../components/Home';
 import TeamContainer from '../containers/TeamContainer';
+import RecruitmentContainer from '../containers/RecruitmentContainer';
 
 const routes = (
-  <Router history={browserHistory}>
+  <Router history={hashHistory}>
     <Route path='/' component={MainContainer}>
       <IndexRoute component={Home} />
       <Route path='team' component={TeamContainer} />
+      <Route path='recruitment' component={RecruitmentContainer} />
     </Route>
   </Router>
 );

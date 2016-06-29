@@ -1,10 +1,10 @@
 {
-  "name": "material-ui-example-browserify",
-  "version": "0.15.0",
-  "description": "Sample project that uses Material-UI",
+  "name": "Purdue-Rugby-Site",
+  "version": "0.0.1",
+  "description": "Purdue Rugby Official Team Page",
   "repository": {
     "type": "git",
-    "url": "https://github.com/callemall/material-ui.git"
+    "url": "https://github.com/PurdueRugby/site.git"
   },
   "scripts": {
     "start": "gulp"
@@ -31,6 +31,7 @@
     "react": "^15.0.1",
     "react-bootstrap": "^0.29.5",
     "react-dom": "^15.0.1",
+    "react-helmet": "^3.1.0",
     "react-router": "^2.5.0",
     "react-tap-event-plugin": "^1.0.0"
   }
