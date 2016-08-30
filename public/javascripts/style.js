@@ -2,6 +2,27 @@ $(document).ready(function() {
     setContentView();
     setInstaView();
     setInstaTime();
+
+    $.get('drive.php', function(doc){
+        var html = $.parseHTML(doc);
+
+        console.log(html);
+
+        var text = html[8].content;
+        //var text = $(html[7])[0].innerText;
+
+        //console.log(text.length);
+        //console.log(otherText);
+        //
+        //if (text == '') {
+        //    console.log('here');
+        //    text = otherText;
+        //}
+        text = text.split('#');
+
+        $('#driveHeader').text(text[0]);
+        $('#driveContent').text(text[1]);
+    });
 });
 
 $(window).resize(function() {
@@ -44,7 +65,7 @@ function setInstaView() {
     twitter.css({
         width: size,
         marginLeft: margin
-    })
+    });
 }
 
 
