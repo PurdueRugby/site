@@ -1,0 +1,2 @@
+allow from all
+ErrorDocument 404 http://web.ics.purdue.edu/~rugby/404.html

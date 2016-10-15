@@ -1,0 +1,436 @@
+html, body, main {
+	margin: 0px;
+	padding: 0px;
+	background-image: url(../res/site_images/summer_pitch.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+/*************************NAVBAR*************************/
+.navbar {
+	margin-bottom: 0px;
+}
+
+.navbar-nav {
+	margin: 0px;
+}
+
+#upperBar {
+	margin: 0px;
+	padding: 0px;
+	background-color: #000;
+	border-bottom: 4px solid #CEB888;
+	box-shadow: 0px 2px 10px #1e1e1e;
+}
+
+#myNavbar > ul > li > a {
+    font-family: 'Oswald', sans-serif;
+    color: #CEB888;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+}
+
+#myNavbar > ul > li > a:hover {
+	background: #CEB888;
+    color: #000;
+    -ms-transform: skewX(-20deg);
+    -webkit-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+}
+
+#myNavbar ul > li > a:hover .skew {
+    -ms-transform: skewX(20deg);
+    -webkit-transform: skewX(20deg);
+    transform: skewX(20deg);
+}
+
+span.skew {
+	display: inline-block;
+}
+
+#middleBar {
+	max-height: 100px;
+	background-image: url(../res/site_images/carbon_background.jpg);
+}
+
+.lowerBar {
+	margin: 0px;
+	padding: 0px;
+	background-color: #000;
+	border-bottom: 5px solid #CEB888;
+	border-top: 5px solid white;
+	box-shadow: 0px 2px 10px #1e1e1e;
+}
+
+.lowerBar .container-fluid {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.lowerBar > .container-fluid > ul > li > a {
+    font-family: 'Oswald', sans-serif;
+    color: #CEB888;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+}
+
+.lowerBar > .container-fluid > ul > li > a:hover {
+	background: #CEB888;
+    color: #000;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+	background: #CEB888;
+    color: #000;
+}
+
+#bannerImage {
+	height: 100%;
+	display: none;
+}
+
+#head_one {
+	display: inline-block;
+	font-family: 'Graduate', 'Oswald', sans-serif;
+	color: #CEB888;
+	font-weight: bold;
+	font-size: 38pt;
+	margin: 5px;
+	vertical-align: middle;
+}
+#head_two {
+	display: inline-block;
+	font-family: 'Graduate', 'Oswald', sans-serif;
+	color: #fff;
+	margin: 5px;
+	vertical-align: middle;
+}
+
+
+/****************************index.html**************************/
+#topStories {
+	margin-top: 15px;
+}
+
+#socialMedia {
+	margin-top: 15px;
+}
+
+.socialBox {
+	height: 400px;
+}
+
+#carouselContain {
+	padding: 0px;
+	margin-bottom: 15px;
+}
+
+#myCarousel {
+	background-color: #fff;
+	overflow: hidden;
+	height: 400px;
+}
+
+.carousel-inner > .item > img {
+	height: 400px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.carousel-inner {
+	background-color: black;
+}
+
+
+
+.carousel-caption {
+	background-color: rgba(255, 255, 255, 0.8);
+	padding: 10px;
+    width: 100%;
+    left: 0%;
+    right: 0%;
+    bottom: 0px;
+    text-align: left;
+    border: 3px solid #424242;
+}
+
+
+.carousel-caption h3 {
+	font-family: 'Oswald', sans-serif;
+    color: #000;
+    font-size: 25px;
+    text-transform: uppercase; 
+    margin-top: 10px;
+}
+
+.carousel-caption p {
+	font-family: "Roboto", sans-serif;
+    color: #373A36;
+}
+
+.carousel-indicators {
+	bottom: 355px;
+}
+.carousel-indicators li {
+	display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 1px;
+    cursor: pointer;
+    background: #CEB888;
+    -ms-transform: skewX(-24deg);
+    -webkit-transform: skewX(-24deg);
+    transform: skewX(-24deg);
+    border: none;
+    border-radius: 0px;
+}
+
+.carousel-indicators .active {
+	background: #927C62;
+	width: 20px;
+    height: 20px;
+    margin: 1px;
+}
+
+
+#upcomingScheduleContain {
+	height: 400px;
+	margin-bottom: 15px;
+}
+
+#scheduleHead {
+	height: 40px;
+}
+
+#calendarHead {
+	background-color: #CEB888;
+	-ms-transform: skewX(-20deg);
+    -webkit-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+    height: 100%;
+}
+
+#calIcon {
+	-ms-transform: skewX(20deg);
+    -webkit-transform: skewX(20deg);
+    transform: skewX(20deg);
+    padding-top: 5px;
+}
+
+#upcomingHead {
+	background-color: black;
+	-ms-transform: skewX(-20deg);
+    -webkit-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+    height: 100%;
+}
+
+#upcomingText {
+	-ms-transform: skewX(20deg);
+    -webkit-transform: skewX(20deg);
+    transform: skewX(20deg);
+    padding-top: 5px;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: #FFF;
+}
+
+#calendar {
+	margin-top: 10px;
+}
+
+.calRow {
+	border-bottom: 2px solid #FFF;
+    height: 80px;
+    padding: 0px;
+}
+
+.calRow:nth-child(odd) {
+    background: #000;
+}
+
+.calRow:nth-child(even) {
+    background: #373A36;
+}
+
+.leftBlock {
+	border-right: 2px solid #FFF;
+    height: 80px;
+    text-align: center;
+    padding: 0px 5px;
+    overflow: hidden;
+    max-width: 95px;
+}
+
+.locationID {
+	width: 40px;
+    height: 100%;
+    float: left;
+    text-align: center;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    color: #FFF;
+    padding-top: 20px;
+
+}
+
+.teamLogo {
+    height: 90%;
+    padding: 5px 5px 0px 0px;
+}
+
+.teamLogo img {
+	max-height: 100%;
+}
+
+.rightBlock {
+	float: left;
+    height: 80px;
+    padding: 5px;
+}
+
+.dayDate {
+	color: #FFF;
+	font-size: 12px;
+	font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.matchTime {
+	color: #9D968D;
+    font-size: 10px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.opponent {
+	font-size: 14px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    color: #CEB888;
+    text-transform: uppercase;
+}
+
+.location {
+	color: #9D968D;
+    font-size: 10px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+
+#seeFullSchedule {
+	height: 33px;
+	padding: 6px 10px;
+}
+
+#seeFullSchedule a {
+	text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: #FFF;
+	text-decoration: none;
+}
+
+#seeFullSchedule a:hover {
+	color: #CEB888;
+}
+
+/*******************schedule.html******************/
+
+#scheduleContain {
+	margin-bottom: 15px;
+}
+
+/*********footer*******/
+#footer {
+	padding: 15px;
+	border-top: 4px solid #CEB888;
+	background-color: black;
+}
+
+#logoBar {
+	text-align: center;
+}
+#d1aRugby img, #usaRugby img {
+	display: block;
+	width: auto;
+	margin: auto;
+	max-height: 100px;
+}
+
+#d1aRugby, #usaRugby, #purdueLogo {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#purdueLogo img {
+	display: block;
+	width: 100%;
+	margin: auto;
+	max-height: 100px;
+}
+
+#footerText {
+	text-align: center;
+	color: white;
+	font-size: 10pt;
+	margin: 0px;
+	padding: 0px;
+}
+
+#footerText a {
+	color: #CEB888;
+}
+
+/***************************MEDIA QUERIES************************/
+@media (min-width : 768px) {
+	.navbar-nav > li {
+	    padding: 0px;
+	}
+
+	#bannerImage {
+		height: 100%;
+		display: inline-block;
+	}
+
+	#head_one {
+		font-size: 38pt;
+		margin: 0px;
+	}
+	#head_two {
+		font-size: 20pt;
+		margin: 0px;
+	}
+}
+
+@media (min-width : 992px) {
+	#head_one {
+	}
+	#head_two {
+	}
+	
+}
+
+@media (min-width : 1200px) {
+	#head_one {
+	}
+	#head_two {
+	}
+}
