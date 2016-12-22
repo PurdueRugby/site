@@ -1,0 +1,63 @@
+@import 'rugbyStyle.css';
+main {
+    background: black;
+}
+
+h1 {
+    color: #CEB888;
+}
+
+label {
+    color: #CEB888;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.rugby-info {
+    opacity: 0;
+    transition: opacity 1s linear;
+}
+
+.rugby-info.open {
+    opacity: 1;
+}
+
+button {
+    background: #CEB888;
+    font-weight: bold;
+    align-self: center;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.recruiter {
+    align-self: baseline;
+}
+
+@media (min-width: 768px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        margin: 0 5em 0 5em;
+    }
+    .form-group {
+        width: 30.5em;
+    }
+    .form-group div :first-child {
+        margin-right: 5em;
+    }
+    form {
+        padding: 5em;
+        align-self: flex-end;
+    }
+    h1 {
+        font-weight: bold;
+        align-self: center;
+    }
+}
