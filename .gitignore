@@ -3,3 +3,8 @@ push.sh
 git.sh
 .idea
 /node_modules/
+.cache
+.sudo_as_admin_successful
+.vagrant
+VagrantFile
+ubuntu-xenial-16.04-cloudimg-console.log
