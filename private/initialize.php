@@ -8,14 +8,11 @@ define("PRIVATE_PATH", dirname(__FILE__));
 define("PROJECT_PATH", dirname(PRIVATE_PATH));
 define("SHARED_PATH", PRIVATE_PATH . '/shared');
 define("PUBLIC_PATH", PROJECT_PATH . '/public');
+define("DB_PATH", PRIVATE_PATH . '/database');
 
-/*
 require_once('functions.php');
-require_once('database.php');
-require_once('query_functions.php');
-require_once('validation_functions.php');
-*/
+require_once(DB_PATH . '/db_initialize.php');
 
-// $db = db_connect();
+$db = db_connect();
 
 ?>

@@ -11,7 +11,7 @@
       <div class="collapse navbar-collapse navbar-right" id="myNavbar">
         <ul class="nav navbar-nav">
           <li><a href="/"><span class="skew">News</span></a></li>
-          <li><a href="/public/schedule.php"><span class="skew">Schedules</span></a></li>
+          <li><a href="/schedule"><span class="skew">Schedules</span></a></li>
         </ul>
       </div>
     </div>

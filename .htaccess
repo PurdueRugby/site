@@ -1,2 +1,5 @@
 allow from all
 ErrorDocument 404 http://web.ics.purdue.edu/~rugby/404.html
+RewriteEngine on
+RewriteRule ^schedule$ public/schedule.php 
+

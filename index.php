@@ -60,7 +60,7 @@ include(SHARED_PATH . '/header.php');
               <div class="calRow col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="leftBlock col-lg-3 col-md-3 col-sm-3 col-xs-3">
                   <div class="teamLogo">
-                    <img src="res\logos\michigan-state-logo.png">
+                    <img src="public\images\logos\michigan-state-logo.png">
                   </div>
                 </div>
                 <div class="rightBlock col-lg-9 col-md-9 col-sm-9 col-xs-9">
@@ -78,7 +78,7 @@ include(SHARED_PATH . '/header.php');
               <div class="calRow col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="leftBlock col-lg-3 col-md-3 col-sm-3 col-xs-3">
                   <div class="teamLogo">
-                    <img src="res\logos\minnesota-logo.png">
+                    <img src="public\images\logos\minnesota-logo.png">
                   </div>
                 </div>
                 <div class="rightBlock col-lg-9 col-md-9 col-sm-9 col-xs-9">
@@ -96,7 +96,7 @@ include(SHARED_PATH . '/header.php');
               <div class="calRow col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="leftBlock col-lg-3 col-md-3 col-sm-3 col-xs-3">
                   <div class="teamLogo">
-                    <img src="res\logos\illinois-logo.png">
+                    <img src="public\images\logos\illinois-logo.png">
                   </div>
                 </div>
                 <div class="rightBlock col-lg-9 col-md-9 col-sm-9 col-xs-9">
@@ -113,7 +113,7 @@ include(SHARED_PATH . '/header.php');
                 <div class="calRow col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <div class="leftBlock col-lg-3 col-md-3 col-sm-3 col-xs-3">
                     <div class="teamLogo">
-                      <img src="res\logos\d1a-logo.png">
+                      <img src="public\images\logos\d1a-logo.png">
                     </div>
                   </div>
                   <div class="rightBlock col-lg-9 col-md-9 col-sm-9 col-xs-9">

@@ -28,7 +28,7 @@ AT
 </div>
 -->
                     <div class="teamLogo">
-                      <img src="images\logos\wisconsin-badgers-logo.png">
+                      <img src="/public/images/logos/wisconsin-badgers-logo.png">
                     </div>
                   </div>
                   <div class="rightBlock col-lg-9 col-md-9 col-sm-9 col-xs-9">
