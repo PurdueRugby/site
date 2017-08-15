@@ -1,6 +1,6 @@
 <html>
 
-<head>
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
@@ -21,157 +21,104 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Graduate" rel="stylesheet">
-    <script>
-        window.twttr = (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0],
-                t = window.twttr || {};
-            if (d.getElementById(id)) return t;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "https://platform.twitter.com/widgets.js";
-            fjs.parentNode.insertBefore(js, fjs);
+  </head>
 
-            t._e = [];
-            t.ready = function(f) {
-                t._e.push(f);
-            };
-            return t;
-        }(document, "script", "twitter-wjs"));
-    </script>
-</head>
-
-<body>
+  <body>
     <header>
-        <nav id="upperBar" class="navbar navbar-inverse">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span> 
-			      </button>
-                </div>
-                <div class="collapse navbar-collapse navbar-right" id="myNavbar">
-                    <ul class="nav navbar-nav">
-                        <li><a href="index.html"><span class="skew">News</span></a></li>
-                        <li><a href="schedule.html"><span class="skew">Schedules</span></a></li>
-                        <li><a href="recruitment.html"><span class="skew">Recruitment</span></a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <div id="middleBar">
-            <img id="bannerImage" src="res/site_images/weathered_crest_small.jpg">
-            <h1 id="head_one">Purdue</h1>
-            <h3 id="head_two">Men's Rugby</h3>
+      <nav id="upperBar" class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span> 
+            </button>
+          </div>
+          <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li><a href="index.html"><span class="skew">News</span></a></li>
+              <li><a href="schedule.html"><span class="skew">Schedules</span></a></li>
+              <li><a target="_blank" href="https://securelb.imodules.com/s/1461/campaign/index.aspx?sid=1461&gid=1010&pgid=1754&cid=4045&bledit=1&dids=1762&appealcode=10091"><span class="skew">Donate</span></a></li>
+              <li><a href="recruitment.html"><span class="skew">Incoming Players</span></a></li>
+
+            </ul>
+          </div>
         </div>
-        <nav id="" class="navbar navbar-default lowerBar">
-            <div class="container-fluid">
-                <ul class="nav navbar-nav">
-                    <li class="active toggleStory"><a href="#topStories">Top Stories</a></li>
-                </ul>
-            </div>
-        </nav>
+      </nav>
+      <div id="middleBar">
+        <img id="bannerImage" src="res/site_images/weathered_crest_small.jpg">
+        <h1 id="head_one">Purdue</h1>
+        <h3 id="head_two">Men's Rugby</h3>
+      </div>
+      <nav id="" class="navbar navbar-default lowerBar">
+        <div class="container-fluid">
+          <ul class="nav navbar-nav">
+            <li class="active toggleStory"><a href="#topStories">Top Stories</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
     <main class="container">
-        <h1>Prospective Player Survey</h1>
-        <div class="content">
-            <div class="recruiter">
-                <img src="https://unsplash.it/300/400">
+      <h1>Incoming Player Survey</h1>
+      <div class="content">
+        <form action="https://formspree.io/purduerugby@gmail.com" method="POST">
+          <div class="form-group ">
+            <label for="name">Name</label>
+            <div>
+              <input type="text" placeholder="First Name" name="firstname">
+              <input type="text" placeholder="Last Name" name="lastname">
             </div>
-            <form>
-                <div class="form-group ">
-                    <label for="name">Name</label>
-                    <div>
-                        <input type="text" placeholder="First Name" name="firstname">
-                        <input type="text" placeholder="Last Name" name="lastname">
-                    </div>
-                </div>
-                <div class="form-group ">
-                    <label for="hometown">Hometown</label>
-                    <input type="text" placeholder="Hometown" name="hometown">
-                </div>
-                <div class="form-group ">
-                    <label for="enrollment">Enrollment Date</label>
-                    <input type="month" name="enrollmentdate">
-                </div>
-                <div class="form-group ">
-                    <label for="major">Intended Major</label>
-                    <input type="text" placeholder="Major" name="major">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" name="email">
-                </div>
-                <div class="form-group ">
-                    <input type="checkbox" name="played"><label>Have you played rugby before?</label>
-                </div>
-                <div class="form-group rugby-info">
-                    <label for="year">Years Played</label>
-                    <input type="number" name="yearplayed">
-                </div>
-                <div class="form-group rugby-info">
-                    <label for="position">Position</label>
-                    <input type="text" name="position">
-                </div>
-                <div class="form-group">
-                    <button class="btn" type="button">Submit</button>
-                </div>
-            </form>
-        </div>
+          </div>
+          <div class="form-group ">
+            <label for="hometown">Hometown</label>
+            <input type="text" placeholder="Hometown" name="hometown">
+          </div>
+          <div class="form-group ">
+            <label for="enrollment">Enrollment Date</label>
+            <input type="month" name="enrollmentdate">
+          </div>
+          <div class="form-group ">
+            <label for="major">Intended Major</label>
+            <input type="text" placeholder="Major" name="major">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email">
+          </div>
+          <div class="form-group ">
+            <input type="checkbox" name="played"><label>Have you played rugby before?</label>
+          </div>
+          <div class="form-group">
+            <button class="btn" type="submit">Submit</button>
+          </div>
+          <input type="hidden" name="redirect" value="index.html">
+        </form>
+      </div>
     </main>
     <footer>
-        <div id="footer" class="container-fluid col-lg-12 col-md-12 col-sm-12 ">
-            <div class="row">
-                <div id="logoBar" class="col-lg-12 col-md-12 col-sm-12 ">
-                    <div class="col-xs-1"></div>
-                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
-                        <div id="d1aRugby" class="col-lg-4 col-md-4 col-sm-4 ">
-                            <a href="http://www.d1arugby.com"><img src="res/logos/d1a-logo.png"></a>
-                        </div>
-                        <div id="purdueLogo" class="col-lg-4 col-md-4 col-sm-4 ">
-                            <a href="http://www.purdue.edu"><img src="res/logos/purdue-university-logo.png"></a>
-                        </div>
-                        <div id="usaRugby" class="col-lg-4 col-md-4 col-sm-4 ">
-                            <a href="http://www.usarugby.org"><img src="res/logos/usa_rugby_logo.png"></a>
-                        </div>
-                    </div>
-                    <div class="col-xs-1"></div>
-                </div>
-                <div id="footerText" class="col-lg-12 col-md-12 col-sm-12 ">
-                    <p>Purdue Rugby is a member of the <a href="http://www.bturugby.com">Big Ten Universities Rugby Conference</a></p>
-                </div>
+      <div id="footer" class="container-fluid col-lg-12 col-md-12 col-sm-12 ">
+        <div class="row">
+          <div id="logoBar" class="col-lg-12 col-md-12 col-sm-12 ">
+            <div class="col-xs-1"></div>
+            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+              <div id="d1aRugby" class="col-lg-4 col-md-4 col-sm-4 ">
+                <a href="http://www.d1arugby.com"><img src="res/logos/d1a-logo.png"></a>
+              </div>
+              <div id="purdueLogo" class="col-lg-4 col-md-4 col-sm-4 ">
+                <a href="http://www.purdue.edu"><img src="res/logos/purdue-university-logo.png"></a>
+              </div>
+              <div id="usaRugby" class="col-lg-4 col-md-4 col-sm-4 ">
+                <a href="http://www.usarugby.org"><img src="res/logos/usa_rugby_logo.png"></a>
+              </div>
             </div>
+            <div class="col-xs-1"></div>
+          </div>
+          <div id="footerText" class="col-lg-12 col-md-12 col-sm-12 ">
+            <p>Purdue Rugby is a member of the <a href="http://www.bturugby.com">Big Ten Universities Rugby Conference</a></p>
+          </div>
         </div>
+      </div>
     </footer>
-    <script type="text/javascript">
-        $('.toggleStory').click(function(event) {
-            $('.toggleStory').addClass('active');
-            $('.toggleSocialMedia').removeClass('active');
-            $('#topStories').addClass('show');
-            $('#socialMedia').removeClass('show');
-            $('#socialMedia').addClass('hide');
-            return false;
-
-        });
-        $('.toggleSocialMedia').click(function(event) {
-            $('.toggleSocialMedia').addClass('active');
-            $('.toggleStory').removeClass('active');
-            $('#socialMedia').addClass('show');
-            $('#topStories').removeClass('show');
-            $('#topStories').addClass('hide');
-            return false;
-        });
-
-        function displayRugbyInfo() {
-            rugbyInfo.forEach(info => info.classList.toggle('open'));
-        }
-
-        const played = document.querySelector('.form-group input[name=played]');
-        const rugbyInfo = document.querySelectorAll('.rugby-info');
-        played.addEventListener('click', displayRugbyInfo);
-    </script>
-
-</body>
+  </body>
 
 </html>
