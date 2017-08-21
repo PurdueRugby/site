@@ -8,6 +8,8 @@
     <!-- Javascript/JQuery -->
     <script src="jQuery/jquery-2.1.4.js"></script>
     <script src="js/bootstrap.js"></script>
+    <!-- google analytics -->
+    <script> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-105024976-1', 'auto');ga('send', 'pageview');</script>
     <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <!-- custom css -->
@@ -50,71 +52,88 @@
       </div>
     </header>
     <main>
-      <div class="container-fluid">
-        <div id="topStories" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <div id="carouselContain" class="col-lg-8 col-md-8 col-sm-7 col-xs-12">
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-              <!-- Indicators -->
-              <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-              </ol>
+    <div class="container-fluid">
+      <div id="topStories" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div id="carouselContain" class="col-lg-8 col-md-8 col-sm-7 col-xs-12">
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
 
-              <!-- Wrapper for slides -->
-              <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                  <img src="res/media_images/big_ten_fall_2017_schedule.jpg" alt="Flower">
-                  <div class="carousel-caption">
-                    <h3>Fall 2017 Big Ten Schedule</h3>
-                    <p>Purdue looks forward to the 2017 Big Ten Universities rugby season.</p>
-                  </div>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+              <div class="item active">
+                <img src="res/media_images/big_ten_fall_2017_schedule.jpg" alt="Flower">
+                <div class="carousel-caption">
+                  <h3>Fall 2017 Big Ten Schedule</h3>
+                  <p>Purdue looks forward to the 2017 Big Ten Universities rugby season.</p>
                 </div>
               </div>
             </div>
           </div>
-          <div id="upcomingScheduleContain" class="col-lg-4 col-md-4 col-sm-5 col-xs-12">
-            <div id="scheduleHead">
-              <div id="calendarHead" class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
-                <i id="calIcon" class="fa fa-2x fa-calendar"></i>
+        </div>
+        <div id="upcomingScheduleContain" class="col-lg-4 col-md-4 col-sm-5 col-xs-12">
+          <div id="scheduleHead">
+            <div id="calendarHead" class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+              <i id="calIcon" class="fa fa-2x fa-calendar"></i>
+            </div>
+            <div id="upcomingHead" class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+              <div id="upcomingText">
+                Upcoming Matches
               </div>
-              <div id="upcomingHead" class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
-                <div id="upcomingText">
-                  Upcoming Matches
+            </div>
+          </div>
+          <div id="calendar">
+            <div class="calRow col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <div class="leftBlock col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div class="teamLogo">
+                  <img src="res\logos\indiana-logo.png">
+                </div>
+              </div>
+              <div class="rightBlock col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                <div class="opponent">
+                  away vs indiana
+                </div>
+                <div class="dayDate">
+                  saturday, september 16th, 1:00 pm eastern time
+                </div>
+                <div class="location">
+                  bloominton, indiana
                 </div>
               </div>
             </div>
-            <div id="calendar">
-              <div class="calRow col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="leftBlock col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                  <div class="teamLogo">
-                    <img src="res\logos\indiana-logo.png">
-                  </div>
-                </div>
-                <div class="rightBlock col-lg-9 col-md-9 col-sm-9 col-xs-9">
-                  <div class="opponent">
-                    away vs indiana
-                  </div>
-                  <div class="dayDate">
-                    saturday, september 16th, 1:00 pm eastern time
-                  </div>
-                  <div class="location">
-                    bloominton, indiana
-                  </div>
+            <div class="calRow col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <div class="leftBlock col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div class="teamLogo">
+                  <img src="res\logos\michigan-logo.png">
                 </div>
               </div>
-              <div class="calRow col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="leftBlock col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                  <div class="teamLogo">
-                    <img src="res\logos\michigan-logo.png">
-                  </div>
+              <div class="rightBlock col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                <div class="opponent">
+                  home vs Michigan
                 </div>
-                <div class="rightBlock col-lg-9 col-md-9 col-sm-9 col-xs-9">
-                  <div class="opponent">
-                    home vs Michigan
-                  </div>
+                <div class="dayDate">
+                  saturday, september 30th, 1:00 pm eastern time
+                </div>
+                <div class="location">
+                  west lafayette, indiana
+                </div>
+              </div>
+            </div>
+            <div class="calRow col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <div class="leftBlock col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div class="teamLogo">
+                  <img src="res\logos\illinois-logo.png">
+                </div>
+              </div>
+              <div class="rightBlock col-lg-9 col-md-9 col-sm-9 col-xs-9">
+                <div class="opponent">
+                  home vs Illinois
                   <div class="dayDate">
-                    saturday, september 30th, 1:00 pm eastern time
+                    saturday, october 7th, 1:00 pm eastern time
                   </div>
                   <div class="location">
                     west lafayette, indiana
@@ -124,45 +143,28 @@
               <div class="calRow col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="leftBlock col-lg-3 col-md-3 col-sm-3 col-xs-3">
                   <div class="teamLogo">
-                    <img src="res\logos\illinois-logo.png">
+                    <img src="res\logos\michigan-state-logo.png">
                   </div>
                 </div>
                 <div class="rightBlock col-lg-9 col-md-9 col-sm-9 col-xs-9">
                   <div class="opponent">
-                    home vs Illinois
-                    <div class="dayDate">
-                      saturday, october 7th, 1:00 pm eastern time
-                    </div>
-                    <div class="location">
-                      west lafayette, indiana
-                    </div>
+                    away vs michigan state
+                  </div>
+                  <div class="dayDate">
+                    saturday, October 14th, 1:00 pm eastern time
+                  </div>
+                  <div class="location">
+                    east lansing, michigan
                   </div>
                 </div>
-                <div class="calRow col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                  <div class="leftBlock col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                    <div class="teamLogo">
-                      <img src="res\logos\michigan-state-logo.png">
-                    </div>
-                  </div>
-                  <div class="rightBlock col-lg-9 col-md-9 col-sm-9 col-xs-9">
-                    <div class="opponent">
-                      away vs michigan state
-                    </div>
-                    <div class="dayDate">
-                      saturday, October 14th, 1:00 pm eastern time
-                    </div>
-                    <div class="location">
-                      east lansing, michigan
-                    </div>
-                  </div>
-                </div>
-                <div class="calRow col-lg-12 col-md-12 col-sm-12 col-xs-12" id="seeFullSchedule">
-                  <a href="schedule.html">See Full Schedule >></a>
-                </div>
+              </div>
+              <div class="calRow col-lg-12 col-md-12 col-sm-12 col-xs-12" id="seeFullSchedule">
+                <a href="schedule.html">See Full Schedule >></a>
               </div>
             </div>
           </div>
         </div>
+      </div>
     </main>
     <footer>
       <div id="footer" class="container-fluid col-lg-12 col-md-12 col-sm-12 col-xs-12">
